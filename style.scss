@@ -1,0 +1,177 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+$font-weights: (
+  "SemiBold": 600,
+  "ExtraBold": 800,
+);
+$intro-font: 1rem;
+
+//Colors
+
+$pr1: hsl(174, 77%, 80%); /* Soft Cyan (Full Slider Bar)  */
+$pr2: hsl(174, 86%, 45%); /* Strong Cyan (Slider Backround)  */
+$pr3: hsl(14, 92%, 95%); /* Light Grayish Red (Discount Background)  */
+$pr4: hsl(15, 100%, 70%); /* Light Red (Discount Text) */
+$pr5: hsl(226, 100%, 87%); /* Pale Blue (CTA Text)  */
+
+$neu1: hsl(0, 0%, 100%); /* White (Pricing Component Background)  */
+$neu2: hsl(230, 100%, 99%); /* Very Pale Blue (Main Background)  */
+$neu3: hsl(224, 65%, 95%); /* Light Grayish Blue (Empty Slider Bar)  */
+$neu4: hsl(223, 50%, 87%); /* Light Grayish Blue (Toggle Background)  */
+$neu5: hsl(225, 20%, 60%); /* Grayish Blue (Text)  */
+$neu6: hsl(227, 35%, 25%); /* Dark Desaturated Blue (Text & CTA Background) */
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: $neu2;
+  background-image: url(/../images/bg-pattern.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  min-height: 100vh;
+}
+
+.title {
+  
+    margin-top: 7rem;
+  h3 {
+    color: $neu6;
+    font-weight: map-get($map: $font-weights, $key: "ExtraBold");
+  }
+  p {
+    color: $neu5;
+    font-size: $intro-font;
+    font-weight: map-get($map: $font-weights, $key: "SemiBold");
+  }
+  img{
+    left:50%;
+    top:-2rem;
+    transform: translate(-50%);
+    z-index: -1;
+  
+  }
+}
+.price-box{
+  width: 40%;
+  background-color: $neu1;
+  margin-top: 3rem;
+  -webkit-box-shadow: 15px 21px 29px 8px rgba(0,0,0,0.11);
+  -moz-box-shadow: 15px 21px 29px 8px rgba(0,0,0,0.11);
+  box-shadow: 15px 21px 29px 8px rgba(0,0,0,0.11);
+  
+}
+.inner-content{
+
+  padding:2rem;
+}
+
+.views,.rates,.monthly,.yearly{
+  color:$neu5;
+  
+}
+.rates span{
+  color: $neu6;
+  font-weight: map-get($map: $font-weights, $key: 'ExtraBold');
+  font-size: 2rem;
+}
+.views{
+  letter-spacing: 2px;
+  font-weight: map-get($map: $font-weights, $key:"SemiBold" );
+}
+#rangeInput {
+  background: $neu3;
+ border-radius: 8px;
+ height: 9px;
+  width: 90%;
+ outline: none;
+ border: none;
+ transition: background 450ms ease-in;
+ -webkit-appearance: none;
+ appearance: none;
+ &::-webkit-slider-thumb{
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius:50%;
+  background-color:$pr2 ;
+  background-image: url(/../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0px 13px 18px hsl(174, 77%, 80%);
+  cursor: pointer;
+ }
+ &:focus::-webkit-slider-thumb{
+  background-color: hsl(174, 69%, 31%);
+ }
+}
+
+#mySwitch{
+  background-color: $neu4;
+  cursor: pointer;
+  height: 1.2rem;
+  width: 2.2rem;
+ 
+  &:checked{
+    background-color: $pr2;
+  }
+}
+.yearly,.monthly{
+  font-size: 0.88rem;
+}
+.discount span{
+  color:$pr4;
+  background-color: $pr3;
+  border-radius: 17px;
+  padding:7px;
+}
+.checkList li{
+  color:$neu5;
+}
+.cta-button button{
+  color:$pr5;
+  background-color: $neu6;
+  outline: none;
+  padding: 0.3rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  &:hover{
+    background-color: $neu6;
+   color: $neu1;
+  }
+}
+// MEDIA QUERIES
+
+@media screen and (width = 1024px) {
+ .price-box{
+  width: 55%;
+ }
+}
+
+@media screen and (width<=992px) {
+ 
+}
+@media screen and (width<= 768px) {
+  body {
+    background-size: 100% 30rem;
+  }
+  .price-box{
+    width: 60%;
+  }
+  .cta{
+    text-align: center;
+  }
+}
+@media screen and (width <= 600px) {
+  .price-box{
+    width: 92%;
+  }
+}
+
+@media screen  and (height>=1366px){
+  body{
+    min-height: 70vh;
+  }
+}
