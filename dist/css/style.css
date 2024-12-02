@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+/* Soft Cyan (Full Slider Bar)  */
+/* Strong Cyan (Slider Backround)  */
+/* Light Grayish Red (Discount Background)  */
+/* Light Red (Discount Text) */
+/* Pale Blue (CTA Text)  */
+/* White (Pricing Component Background)  */
+/* Very Pale Blue (Main Background)  */
+/* Light Grayish Blue (Empty Slider Bar)  */
+/* Light Grayish Blue (Toggle Background)  */
+/* Grayish Blue (Text)  */
+/* Dark Desaturated Blue (Text & CTA Background) */
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(230, 100%, 99%);
+  background-image: url(/../images/bg-pattern.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.title {
+  margin-top: 7rem;
+}
+.title h3 {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+}
+.title p {
+  color: hsl(225, 20%, 60%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.title img {
+  left: 50%;
+  top: -2rem;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: -1;
+}
+
+.price-box {
+  width: 40%;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 3rem;
+  -webkit-box-shadow: 15px 21px 29px 8px rgba(0, 0, 0, 0.11);
+  box-shadow: 15px 21px 29px 8px rgba(0, 0, 0, 0.11);
+}
+
+.inner-content {
+  padding: 2rem;
+}
+
+.views, .rates, .monthly, .yearly {
+  color: hsl(225, 20%, 60%);
+}
+
+.rates span {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.views {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+#rangeInput {
+  background: hsl(224, 65%, 95%);
+  border-radius: 8px;
+  height: 9px;
+  width: 90%;
+  outline: none;
+  border: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+#rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url(/../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-box-shadow: 0px 13px 18px hsl(174, 77%, 80%);
+          box-shadow: 0px 13px 18px hsl(174, 77%, 80%);
+  cursor: pointer;
+}
+#rangeInput:focus::-webkit-slider-thumb {
+  background-color: hsl(174, 69%, 31%);
+}
+
+#mySwitch {
+  background-color: hsl(223, 50%, 87%);
+  cursor: pointer;
+  height: 1.2rem;
+  width: 2.2rem;
+}
+#mySwitch:checked {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.yearly, .monthly {
+  font-size: 0.88rem;
+}
+
+.discount span {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 17px;
+  padding: 7px;
+}
+
+.checkList li {
+  color: hsl(225, 20%, 60%);
+}
+
+.cta-button button {
+  color: hsl(226, 100%, 87%);
+  background-color: hsl(227, 35%, 25%);
+  outline: none;
+  padding: 0.3rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.cta-button button:hover {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (width = 1024px) {
+  .price-box {
+    width: 55%;
+  }
+}
+@media screen and (width <= 768px) {
+  body {
+    background-size: 100% 30rem;
+  }
+  .price-box {
+    width: 60%;
+  }
+  .cta {
+    text-align: center;
+  }
+}
+@media screen and (width <= 600px) {
+  .price-box {
+    width: 92%;
+  }
+}
+@media screen and (height >= 1366px) {
+  body {
+    min-height: 70vh;
+  }
+}/*# sourceMappingURL=style.css.map */
