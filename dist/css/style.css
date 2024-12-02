@@ -13,7 +13,7 @@
 body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(230, 100%, 99%);
-  background-image: url(./images/bg-pattern.svg);
+  background-image: URL(../images/bg-pattern.svg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
