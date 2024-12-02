@@ -24,7 +24,7 @@ $neu6: hsl(227, 35%, 25%); /* Dark Desaturated Blue (Text & CTA Background) */
 body {
   font-family: "Manrope", sans-serif;
   background-color: $neu2;
-  background-image: URL(/../images/bg-pattern.svg);
+  background-image: URL(../../images/bg-pattern.svg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -97,7 +97,7 @@ body {
   height: 2rem;
   border-radius:50%;
   background-color:$pr2 ;
-  background-image: URL(/../images/icon-slider.svg);
+  background-image: URL(../../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center center;
   box-shadow: 0px 13px 18px hsl(174, 77%, 80%);
